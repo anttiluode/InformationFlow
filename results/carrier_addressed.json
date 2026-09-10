@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "This experiment demonstrates carrier- and overlap-addressed quadratic writing in an engineered information-flow field. It does not establish that Navier-Stokes spontaneously implements the same synapse.",
+  "config": {
+    "grid": 48,
+    "train_steps": 800,
+    "recall_steps": 500,
+    "matched_omega": 2.0,
+    "mismatch_delta_omega": 8.0
+  },
+  "slow_fields": {
+    "W0": {"norm": 0.0, "divergence_rms": 0.0},
+    "WA": {"norm": 0.0, "divergence_rms": 0.0},
+    "WB": {"norm": 0.0, "divergence_rms": 0.0},
+    "WAB": {"norm": 0.09471433212761513, "divergence_rms": 8.088753648015679e-14},
+    "Wsep": {"norm": 0.007156042952257126, "divergence_rms": 6.111763811940019e-15},
+    "Wfreq": {"norm": 0.0007252467297508089, "divergence_rms": 8.070321886984591e-15}
+  },
+  "recall": {
+    "W0": {"upper": 0.06619356469440656, "lower": 0.06619356469433493, "routing_bias": 7.162326287613041e-14},
+    "WA": {"upper": 0.06619356469440656, "lower": 0.06619356469433493, "routing_bias": 7.162326287613041e-14},
+    "WB": {"upper": 0.06619356469440656, "lower": 0.06619356469433493, "routing_bias": 7.162326287613041e-14},
+    "WAB": {"upper": 0.1408747983354234, "lower": 0.07163247610037614, "routing_bias": 0.06924232223504727},
+    "Wsep": {"upper": 0.07426787056471762, "lower": 0.06450655852904226, "routing_bias": 0.00976131203567536},
+    "Wfreq": {"upper": 0.06692576172178384, "lower": 0.06626829328671131, "routing_bias": 0.000657468435072528}
+  },
+  "metrics": {
+    "matched_isolated_routing": 0.06924232223497565,
+    "spatial_separation_control": 0.009761312035603736,
+    "frequency_mismatch_control": 0.0006574684350009047,
+    "matched_over_spatial_control": 7.093546643660742,
+    "matched_over_frequency_control": 105.31657254323365,
+    "matched_slow_norm_over_frequency": 130.5960138966259
+  },
+  "frequency_sweep": [
+    {"delta_omega": 0.0, "slow_norm": 0.09471433212761513, "rectangular_window_coherence": 1.0, "slow_norm_relative_to_match": 0.9999999999999895},
+    {"delta_omega": 0.25, "slow_norm": 0.024085033397193475, "rectangular_window_coherence": 0.18920062382698205, "slow_norm_relative_to_match": 0.254291329054},
+    {"delta_omega": 0.5, "slow_norm": 0.013395271374247968, "rectangular_window_coherence": 0.12366978082792272, "slow_norm_relative_to_match": 0.141428135249895},
+    {"delta_omega": 1.0, "slow_norm": 0.0021737155182033905, "rectangular_window_coherence": 0.01799395729156658, "slow_norm_relative_to_match": 0.022950228010630656},
+    {"delta_omega": 2.0, "slow_norm": 0.0019365629795313449, "rectangular_window_coherence": 0.01723208378880283, "slow_norm_relative_to_match": 0.020446356280294096},
+    {"delta_omega": 4.0, "slow_norm": 0.0016320616394260652, "rectangular_window_coherence": 0.014375406846824854, "slow_norm_relative_to_match": 0.017231411580108692},
+    {"delta_omega": 8.0, "slow_norm": 0.0007252467297508089, "rectangular_window_coherence": 0.005633107113294778, "slow_norm_relative_to_match": 0.0076572015391886674},
+    {"delta_omega": 12.0, "slow_norm": 9.456131130896096e-05, "rectangular_window_coherence": 0.0018486372794366995, "slow_norm_relative_to_match": 0.0009983843963715122}
+  ],
+  "phase_sweep": [
+    {"phase": 0.0, "cos_phase": 1.0, "slow_norm": 0.09471433212761513, "routing_bias": 0.06924232223504727},
+    {"phase": 1.5707963267948966, "cos_phase": 6.123233995736766e-17, "slow_norm": 5.957954777186471e-18, "routing_bias": 7.162326287613041e-14},
+    {"phase": 3.141592653589793, "cos_phase": -1.0, "slow_norm": 0.09471433212761513, "routing_bias": -0.03814365751403699},
+    {"phase": 4.71238898038469, "cos_phase": -1.8369701987210297e-16, "slow_norm": 1.847083996970066e-17, "routing_bias": 7.162326287613041e-14}
+  ]
+}
